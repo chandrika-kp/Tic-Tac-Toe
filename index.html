@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+  <meta name="viewport" content="width=device-width, intial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+  <div class="title">
+    <!-- <h1>Tic-Tac-Toe</h1> -->
+    <img src="title.jpg" alt="Tic-Tac-Toe">
+
+  </div>
+  <div class="board">
+    <div class="container">
+      <p style="font-size: 30px;">Let's Play Together</p>
+
+      <div class="GameBoard" id="GameBoard">
+        <div data-index="1" class="cell"></div>
+        <div data-index="2" class="cell"></div>
+        <div data-index="3" class="cell"></div>
+        <div data-index="4" class="cell"></div>
+        <div data-index="5" class="cell"></div>
+        <div data-index="6" class="cell"></div>
+        <div data-index="7" class="cell"></div>
+        <div data-index="8" class="cell"></div>
+        <div data-index="9" class="cell"></div>
+
+        <div id="strike" class="strike"></div>
+      </div>
+
+    </div>
+
+    <div class="GameOver hidden" id="GameOver">
+      <script type="module">
+        import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+        confetti();
+      </script>
+      <h2 id="winning_Text">Winner is 'X'<br>Congratulations 🏆</h2>
+      <img src="giphy.gif" alt="gif">
+      <button id="re-start">Play Again</button>
+      
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

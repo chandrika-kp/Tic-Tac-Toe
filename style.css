@@ -1,0 +1,190 @@
+body {
+  background-color: black;
+}
+
+.title {
+  text-align: center;
+  background-color: black;
+  padding: 0.01%;
+  color: rgb(0, 166, 255);
+  font-size: 1.5em;
+  text-shadow:
+    0 3px 20px red, 0 0 20px red, 0 0 10px orange, 4px -5px 6px yellow, -4px -10px 10px yellow, 0 -10px 30px yellow;
+
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  background-color: black;
+  color: white;
+  /* justify-content: space-between; */
+  justify-content: center;
+  padding: 10%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+
+  margin-right: 10%;
+  box-shadow: rgb(161, 200, 93) 0px 20px 30px -10px;
+
+}
+
+
+#GameBoard {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  cursor: pointer;
+  position: relative;
+  /* grid-template-columns: repeat(3, auto) */
+
+}
+
+.cell {
+  color: aqua;
+  font-size: 2em;
+  /* background-color: rgb(160, 33, 33); */
+  /* margin: 1vw; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.2em solid blue;
+  border-radius: 10%;
+}
+
+
+/* Removing Border */
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+  border-top: none;
+}
+
+.cell:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.cell:nth-child(3n + 3) {
+  border-right: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+  border-bottom: none;
+}
+
+
+/* strike the complete line */
+.strike {
+  background-color: aquamarine;
+  position: absolute;
+}
+
+.strike-row1 {
+  width: 100%;
+  height: 4px;
+  top: 15%;
+}
+
+.strike-row2 {
+  width: 100%;
+  height: 4px;
+  top: 49%;
+}
+
+.strike-row3 {
+  width: 100%;
+  height: 4px;
+  top: 83%;
+}
+
+.strike-col1 {
+  height: 100%;
+  width: 4px;
+  left: 15%;
+}
+
+.strike-col2 {
+  height: 100%;
+  width: 4px;
+  left: 49%;
+}
+
+.strike-col3 {
+  height: 100%;
+  width: 4px;
+  left: 83%;
+}
+
+.strike-diag1 {
+  height: 6px;
+  width: 90%;
+  top: 50%;
+  left: 6%;
+  transform: skewy(45deg);
+}
+
+.strike-diag2 {
+  height: 6px;
+  width: 90%;
+  top: 50%;
+  left: 5%;
+  transform: skewy(-45deg);
+}
+
+.GameOver {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 10px solid rgb(220, 143, 143);
+  width: 50%;
+  padding: 50px;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+button {
+  background-color: transparent;
+  color: aqua;
+  border: 1px solid blue;
+  padding: 10px;
+  font-size: 2em;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.x-hover:hover::after {
+  content: "X";
+
+}
+
+.o-hover:hover::after {
+  content: "O";
+  opacity: 0.3;
+  color: white;
+
+}
+
+img{
+  height: 30vh;
+  
+}
