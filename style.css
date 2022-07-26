@@ -2,7 +2,7 @@ body {
   background-color: black;
 }
 
-.title {
+/* .title {
   text-align: center;
   background-color: black;
   padding: 0.01%;
@@ -12,7 +12,7 @@ body {
     0 3px 20px red, 0 0 20px red, 0 0 10px orange, 4px -5px 6px yellow, -4px -10px 10px yellow, 0 -10px 30px yellow;
 
 }
-
+ */
 .board {
   display: flex;
   flex-wrap: wrap;
@@ -187,4 +187,21 @@ button {
 img{
   height: 30vh;
   
+}
+footer{
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    font-size: large;
+}
+footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
 }
